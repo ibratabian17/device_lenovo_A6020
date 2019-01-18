@@ -1,4 +1,11 @@
 # system.prop for A6020
+# ART
+dalvik.vm.dex2oat-filter=speed
+dalvik.vm.image-dex2oat-filter=speed
+ro.vendor.qti.am.reschedule_service=true
+ro.sys.fw.dex2oat_thread_count=4
+dalvik.vm.boot-dex2oat-threads=4
+dalvik.vm.dex2oat-threads=4
 
 # Audio
 ro.config.media_vol_steps=25
