@@ -198,6 +198,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 # RIL
 TARGET_RIL_VARIANT := caf
 BOARD_PROVIDES_LIBRIL := false
+TARGET_USES_OLD_MNC_FORMAT := true
 
 # SELinux
 #include device/qcom/sepolicy-legacy/sepolicy.mk
