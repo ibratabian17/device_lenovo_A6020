@@ -458,3 +458,6 @@ on property:sys.boot_completed=1
 
     setprop ro.min_freq_0 200000
     setprop ro.min_freq_4 200000
+
+on property:apexd.status=ready
+    mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
