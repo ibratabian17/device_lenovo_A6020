@@ -36,10 +36,8 @@
 #include <android-base/file.h>
 #include <android-base/strings.h>
 
-#include "property_service.h"
 #include "vendor_init.h"
 
-using android::init::property_set;
 using android::base::ReadFileToString;
 using android::base::GetProperty;
 
@@ -59,58 +57,58 @@ void property_override(std::string prop, std::string value)
 void configure_variant(bool fhd, bool dualsim = true, bool is3gb = false){
     if (fhd) {
         // 1080p screen density
-        property_set("ro.sf.lcd_density", "450");
+        property_override("ro.sf.lcd_density", "450");
 
         if (is3gb) {
             /* Dalvik properties for 1080p/3GB
              *
              * https://github.com/CyanogenMod/android_frameworks_native/blob/cm-14.1/build/phone-xxhdpi-3072-dalvik-heap.mk
              */
-            property_set("dalvik.vm.heapstartsize", "8m");
-            property_set("dalvik.vm.heapgrowthlimit", "288m");
-            property_set("dalvik.vm.heapsize", "768m");
-            property_set("dalvik.vm.heaptargetutilization", "0.75");
-            property_set("dalvik.vm.heapminfree", "512k");
-            property_set("dalvik.vm.heapmaxfree", "8m");
+            property_override("dalvik.vm.heapstartsize", "8m");
+            property_override("dalvik.vm.heapgrowthlimit", "288m");
+            property_override("dalvik.vm.heapsize", "768m");
+            property_override("dalvik.vm.heaptargetutilization", "0.75");
+            property_override("dalvik.vm.heapminfree", "512k");
+            property_override("dalvik.vm.heapmaxfree", "8m");
         } else {
             /* Dalvik properties for 1080p/2GB
              *
              * https://github.com/CyanogenMod/android_frameworks_native/blob/cm-14.1/build/phone-xxhdpi-2048-dalvik-heap.mk
              */
-            property_set("dalvik.vm.heapstartsize", "16m");
-            property_set("dalvik.vm.heapgrowthlimit", "192m");
-            property_set("dalvik.vm.heapsize", "512m");
-            property_set("dalvik.vm.heaptargetutilization", "0.75");
-            property_set("dalvik.vm.heapminfree", "2m");
-            property_set("dalvik.vm.heapmaxfree", "8m");
+            property_override("dalvik.vm.heapstartsize", "16m");
+            property_override("dalvik.vm.heapgrowthlimit", "192m");
+            property_override("dalvik.vm.heapsize", "512m");
+            property_override("dalvik.vm.heaptargetutilization", "0.75");
+            property_override("dalvik.vm.heapminfree", "2m");
+            property_override("dalvik.vm.heapmaxfree", "8m");
 
             // Reduce memory footprint
-            property_set("ro.config.avoid_gfx_accel", "true");
+            property_override("ro.config.avoid_gfx_accel", "true");
         }
     } else {
         // 720p screen density
-        property_set("ro.sf.lcd_density", "290");
+        property_override("ro.sf.lcd_density", "290");
 
         /* Dalvik properties for 720p/2GB
          *
          * https://github.com/CyanogenMod/android_frameworks_native/blob/cm-14.1/build/phone-xhdpi-2048-dalvik-heap.mk
          */
-        property_set("dalvik.vm.heapstartsize", "8m");
-        property_set("dalvik.vm.heapgrowthlimit", "192m");
-        property_set("dalvik.vm.heapsize", "512m");
-        property_set("dalvik.vm.heaptargetutilization", "0.75");
-        property_set("dalvik.vm.heapminfree", "512k");
-        property_set("dalvik.vm.heapmaxfree", "8m");
+        property_override("dalvik.vm.heapstartsize", "8m");
+        property_override("dalvik.vm.heapgrowthlimit", "192m");
+        property_override("dalvik.vm.heapsize", "512m");
+        property_override("dalvik.vm.heaptargetutilization", "0.75");
+        property_override("dalvik.vm.heapminfree", "512k");
+        property_override("dalvik.vm.heapmaxfree", "8m");
 
         // Reduce memory footprint
-        property_set("ro.config.avoid_gfx_accel", "true");
+        property_override("ro.config.avoid_gfx_accel", "true");
     }
 
     if (dualsim) {
-        property_set("persist.radio.multisim.config", "dsds");
-        property_set("ro.telephony.default_network", "9,9");
+        property_override("persist.radio.multisim.config", "dsds");
+        property_override("ro.telephony.default_network", "9,9");
     } else {
-        property_set("ro.telephony.default_network", "9");
+        property_override("ro.telephony.default_network", "9");
     }
 }
 
@@ -185,6 +183,6 @@ void vendor_load_properties()
     }
 
     // Init a dummy BT MAC address, will be overwritten later
-    property_set("ro.boot.btmacaddr", "00:00:00:00:00:00");
+    property_override("ro.boot.btmacaddr", "00:00:00:00:00:00");
 
 }
