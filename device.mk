@@ -133,6 +133,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
+# Healthd
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.0-service 
+
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common_system \
