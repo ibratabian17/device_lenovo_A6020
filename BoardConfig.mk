@@ -143,6 +143,9 @@ TARGET_NO_RPC := true
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 
+# Legacy memfd
+TARGET_HAS_MEMFD_BACKPORT := true
+
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 
