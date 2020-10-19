@@ -351,10 +351,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
-#Sensors
-PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl
-
 #Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service
