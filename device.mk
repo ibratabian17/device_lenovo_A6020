@@ -259,7 +259,6 @@ PRODUCT_PACKAGES += \
     hostapd_default.conf \
     hostapd \
     wcnss_service \
-    wificond \
     wifilogd \
     wpa_supplicant \
     wpa_supplicant.conf
