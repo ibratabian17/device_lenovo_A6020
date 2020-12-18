@@ -58,14 +58,6 @@ PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 PRODUCT_PACKAGES += \
     Dirac
 
-# Display
-PRODUCT_PACKAGES += \
-    gralloc.msm8916 \
-    copybit.msm8916 \
-    hwcomposer.msm8916 \
-    libgenlock \
-    libtinyxml \
-    memtrack.msm8916
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_buffer_age=false
@@ -334,7 +326,13 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service
+    android.hardware.memtrack@1.0-service \
+    gralloc.msm8916 \
+    copybit.msm8916 \
+    hwcomposer.msm8916 \
+    libgenlock \
+    libtinyxml \
+    memtrack.msm8916
 
 # DRM
 PRODUCT_PACKAGES += \
