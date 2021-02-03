@@ -169,9 +169,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl
 
-# Keystore
+# Gatekeeper
 PRODUCT_PACKAGES += \
-    keystore.msm8916
+    android.hardware.gatekeeper@1.0-service.software
 
 # Lights
 PRODUCT_PACKAGES += \
