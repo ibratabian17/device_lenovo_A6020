@@ -65,9 +65,6 @@ PRODUCT_PACKAGES += \
     libbson \
     Snap
 
-PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/configs/external_camera_config.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/external_camera_config.xml
-
 # Charger images
 PRODUCT_PACKAGES += \
     charger_res_images \
