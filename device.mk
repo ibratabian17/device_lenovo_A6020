@@ -22,7 +22,7 @@ $(call inherit-product, vendor/lenovo/A6020/A6020-vendor.mk)
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
-    android.hardware.audio@2.0-service \
+    android.hardware.audio.service \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
     audio.primary.msm8916 \
