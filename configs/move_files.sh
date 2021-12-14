@@ -34,11 +34,11 @@ case "$board_id" in
 esac
 
 # Move variant-specific blobs
-mv /system_root/etc/firmware/variant/$device/* /system_root/etc/firmware/
-rm -rf /system_root/etc/firmware/variant
+mv /system_root/system/etc/firmware/variant/$device/* /system_root/system/etc/firmware/
+rm -rf /system_root/system/etc/firmware/variant
 
 # Copy media configs
-mv /system_root/vendor/etc/media_codecs_$soc.xml /system_root/vendor/etc/media_codecs.xml
-mv /system_root/vendor/etc/media_codecs_performance_$soc.xml /system_root/vendor/etc/media_codecs_performance.xml
+mv /system_root/system/vendor/etc/media_codecs_$soc.xml /system_root/vendor/etc/media_codecs.xml
+mv /system_root/system/vendor/etc/media_codecs_performance_$soc.xml /system_root/vendor/etc/media_codecs_performance.xml
 
 umount /system_root
