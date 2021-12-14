@@ -2,7 +2,7 @@
 
 echo "Mounting system"
 mkdir /system_root
-mount -t ext4 /dev/block/platform/msm_sdcc.1/by-name/system /system_root -o rw,discard
+mount -t ext4 /dev/block/bootdevice/by-name/system /system_root -o rw,discard
 
 board_id="";
 for e in $(cat /proc/cmdline);
