@@ -38,7 +38,9 @@ mv /system_root/system/etc/firmware/variant/$device/* /system_root/system/etc/fi
 rm -rf /system_root/system/etc/firmware/variant
 
 # Copy media configs
-mv /system_root/system/vendor/etc/media_codecs_$soc.xml /system_root/vendor/etc/media_codecs.xml
-mv /system_root/system/vendor/etc/media_codecs_performance_$soc.xml /system_root/vendor/etc/media_codecs_performance.xml
+cd /system_root/system/vendor/etc/
+mv media_codecs_$soc.xml media_codecs.xml
+mv media_codecs_performance_$soc.xml media_codecs_performance.xml
+cd /
 
 umount /system_root
