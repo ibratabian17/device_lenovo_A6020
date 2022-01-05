@@ -22,8 +22,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l_mr1.mk
 # Inherit from A6020 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+<<<<<<< HEAD:lineage_A6020.mk
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+=======
+# Inherit some common ArrowOS stuff
+$(call inherit-product-if-exists, vendor/arrow/config/common.mk)
+>>>>>>> parent of 72dd696 (A6020: Back home):arrow_A6020.mk
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -31,8 +36,9 @@ TARGET_SCREEN_HEIGHT := 1920
 TARGET_BOOTANIMATION_HALF_RES := true
 
 ## Device identifier. This must come after all inclusions
+DEVICE_MAINTAINER := Adithya R
 PRODUCT_DEVICE := A6020
-PRODUCT_NAME := lineage_A6020
+PRODUCT_NAME := arrow_A6020
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := Vibe K5
 PRODUCT_MANUFACTURER := Lenovo
