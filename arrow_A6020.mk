@@ -31,7 +31,7 @@ TARGET_SCREEN_HEIGHT := 1920
 TARGET_BOOTANIMATION_HALF_RES := true
 
 ## Device identifier. This must come after all inclusions
-DEVICE_MAINTAINER := Adithya R
+DEVICE_MAINTAINER := Ibratabian17
 PRODUCT_DEVICE := A6020
 PRODUCT_NAME := arrow_A6020
 PRODUCT_BRAND := Lenovo
@@ -40,5 +40,3 @@ PRODUCT_MANUFACTURER := Lenovo
 
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo
 
-# Unofficial build ID
-TARGET_UNOFFICIAL_BUILD_ID := BETA
