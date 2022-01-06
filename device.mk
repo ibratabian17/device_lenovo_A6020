@@ -65,10 +65,7 @@ PRODUCT_PACKAGES += \
     libbson \
     Snap
 
-# Charger images
-PRODUCT_PACKAGES += \
-    charger_res_images \
-    product_charger_res_images
+
 
 # Display
 PRODUCT_PACKAGES += \
